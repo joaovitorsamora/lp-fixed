@@ -1,0 +1,28 @@
+{
+  "name": "lp-manager-bot",
+  "version": "2.1.0",
+  "description": "LP Manager Bot — OFF-CHAIN engine para Uniswap V3 (Arbitrum)",
+  "scripts": {
+    "dev":            "ts-node -r dotenv/config src/index.ts",
+    "dev:real":       "cross-env USE_MOCK=false ts-node -r dotenv/config src/index.ts",
+    "dev:mock":       "cross-env USE_MOCK=true MOCK_SCENARIO=sideways ts-node -r dotenv/config src/index.ts",
+    "dev:pump":       "cross-env USE_MOCK=true MOCK_SCENARIO=pump ts-node -r dotenv/config src/index.ts",
+    "dev:trend-up":   "cross-env USE_MOCK=true MOCK_SCENARIO=trending_up ts-node -r dotenv/config src/index.ts",
+    "dev:trend-down": "cross-env USE_MOCK=true MOCK_SCENARIO=trending_down ts-node -r dotenv/config src/index.ts",
+    "dev:whipsaw":    "cross-env USE_MOCK=true MOCK_SCENARIO=whipsaw ts-node -r dotenv/config src/index.ts",
+    "dev:drift":      "cross-env USE_MOCK=true MOCK_SCENARIO=slow_drift ts-node -r dotenv/config src/index.ts",
+    "build":          "tsc",
+    "start":          "node -r dotenv/config dist/src/index.js"
+  },
+  "dependencies": {
+    "ethers": "^6.13.0",
+    "viem": "^2.0.0"
+  },
+  "devDependencies": {
+    "@types/node": "^20.0.0",
+    "cross-env":  "^7.0.3",
+    "dotenv":     "^16.0.0",
+    "ts-node":    "^10.9.0",
+    "typescript": "^5.0.0"
+  }
+}

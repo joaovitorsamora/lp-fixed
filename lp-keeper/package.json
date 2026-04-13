@@ -1,0 +1,21 @@
+{
+  "name": "lp-keeper",
+  "version": "1.0.0",
+  "description": "LP Keeper Contract — Hardhat test environment",
+  "scripts": {
+    "compile":      "node scripts/compile.js",
+    "node":         "hardhat node --config hardhat.config.cjs",
+    "test":         "npx ts-node test/LPKeeper.test.ts",
+    "deploy":       "npx ts-node scripts/deploy.ts",
+    "deploy:local": "npx ts-node scripts/deploy.ts"
+  },
+  "devDependencies": {
+    "@nomicfoundation/hardhat-ethers": "^3.0.8",
+    "@types/node": "^20.0.0",
+    "ethers": "^6.13.0",
+    "hardhat": "2.22.18",
+    "solc": "0.8.24",
+    "ts-node": "^10.9.0",
+    "typescript": "^5.0.0"
+  }
+}
